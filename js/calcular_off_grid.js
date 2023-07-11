@@ -58,7 +58,7 @@ function CalcularMPPT() {
   let CorrentePainel = EnergiaReal / TensaoSistema;
   let ResultadoPainel = Math.ceil(CorrentePainel)
   let CoeficientePMax = Temperatura * (PMAX);
-  let RC = (100 + CoeficientePMax) / 100;
+  let RC = (100 - CoeficientePMax) / 100;
   let QuantidadeModulosSerie = TensaoSistema / TensaoModulo;
   let ResultadoModulosSerie = Math.ceil(QuantidadeModulosSerie);
   let QuantidadeModulosParalelo = CorrentePainel / (RC * IMP * HSP);
@@ -141,7 +141,6 @@ function CalcularNOMPPT() {
   const IMP = parseFloat(document.getElementById('imp').value.replace(",", "."));
   const ISC = parseFloat(document.getElementById('isc').value.replace(",", "."));
   const PMAX = parseFloat(document.getElementById('pmax').value.replace(",", "."));
-  const SemMPPT = document.getElementById('NOMPPT').checked;
 
   // Faz o Cálculo
   let PotInversorMin = EnergiaMediaMensal / 0.7;
@@ -166,14 +165,14 @@ function CalcularNOMPPT() {
   let CorrentePainel = EnergiaReal / TensaoSistema;
   let ResultadoPainel = Math.ceil(CorrentePainel)
   let CoeficientePMax = Temperatura * (PMAX);
-  let RC = (100 - CoeficientePMax) / 100;
+  let RC = (100 + CoeficientePMax) / 100;
   let QuantidadeModulosSerie = TensaoSistema / TensaoModulo;
   let ResultadoModulosSerie = Math.ceil(QuantidadeModulosSerie);
   let QuantidadeModulosParalelo = CorrentePainel / (RC * IMP * HSP);
   let ResultadoModulosParalelo = Math.floor(QuantidadeModulosParalelo);
   let QuantidadeModulosTotal = QuantidadeModulosParalelo * QuantidadeModulosSerie;
   let ResultadoModulosTotal = Math.floor(QuantidadeModulosTotal);
-  let ISCTotal = ISC * QuantidadeModulosParalelo;
+  let ISCTotal = ISC * ResultadoModulosParalelo;
   let CorrenteControlador = ISCTotal * 1.25;
   let ResultadoControlador = Math.ceil(CorrenteControlador)
   let CapacidadeDisjuntor = CorrenteControlador * 1.2;
