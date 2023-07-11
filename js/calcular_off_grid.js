@@ -58,7 +58,7 @@ function CalcularMPPT() {
   let CorrentePainel = EnergiaReal / TensaoSistema;
   let ResultadoPainel = Math.ceil(CorrentePainel)
   let CoeficientePMax = Temperatura * (PMAX);
-  let RC = (100 - CoeficientePMax) / 100;
+  let RC = (100 + CoeficientePMax) / 100;
   let QuantidadeModulosSerie = TensaoSistema / TensaoModulo;
   let ResultadoModulosSerie = Math.ceil(QuantidadeModulosSerie);
   let QuantidadeModulosParalelo = CorrentePainel / (RC * IMP * HSP);
