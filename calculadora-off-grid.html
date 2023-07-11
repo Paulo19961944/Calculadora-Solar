@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculadora Projeto Solar</title>
+	<link rel="stylesheet" href="css/estilo.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+		<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+	<script src="js/calcular_off_grid.js" defer></script>
+</head>
+<body>
+
+	<header>
+		<h1 class="titulo">Calculadora de Projeto Solar</h1>
+	</header>
+
+	<section>
+
+		<a><h1 id="off-grid">Calculo Off Grid</h1></a>
+		<form action="" method="get">
+			<p>Potencia Total dos Equipamentos</p><input type="text" name="EMM" id="p" placeholder="Potencia Total (W)"><br>
+			<p>Energia Total Consumida</p><input type="text" name="EMM" id="ed" placeholder="Carga Total Consumida">
+			<p>HSP do Local</p><input type="text" name="EMM" id="hsp" placeholder="HSP do Local">
+			<p>Tensão do Sistema Fotovoltáico</p><input type="text" name="EMM" id="v" placeholder="Tensão do Sistema (V)">
+			<p>Tensão da Bateria</p><input type="text" name="EMM" id="bateria" placeholder="Tensão da Bateria (V)">
+			<p>Capacidade da Bateria</p><input type="text" name="EMM" id="Ah" placeholder="Corrente da Bateria (Ah)">
+			<p>Tensão do Módulo</p><input type="text" name="EMM" id="vm" placeholder="Tensão do Modulo">
+			<p>Temperatura Media do Local (Cº)</p><input type="text" name="EMM" id="temp" placeholder="Temperatura do Local">
+			<p>IMP do Módulo (Catálogo)</p><input type="text" name="EMM" id="imp" placeholder="IMP do Módulo">
+			<p>ISC do Módulo (Catálogo)</p><input type="text" name="EMM" id="isc" placeholder="ISC do Módulo">
+			<p>PMax do Módulo (Catálogo)</p><input type="text" name="EMM" id="pmax" placeholder="PMax do Módulo">
+			<p class="MPPT">Controlador C/MPPT</p><input type="checkbox" name="checkbox" id="MPPT">
+			<p class="convencional">Controlador S/MPPT</p><input type="checkbox" name="checkbox" id="NOMPPT">
+			<br><br><br><br><br><br><button type="button" id="btn" class="btn btn-primary">Calcular</button>
+
+		</form>
+
+		<div id="resultado-off-grid">
+			<p id="MT"></p>
+			<p id="MS"></p>
+			<p id="MP"></p>
+			<p id="CA"></p>
+			<p id="Pot-Inversor"></p>
+			<p id="BS"></p>
+			<p id="BP"></p>
+			<p id="NB"></p>
+			<p id="Corrente-Painel"></p>
+			<p id="Corrente-Controlador"></p>
+			
+
+		</div>
+		
+		
+	</section>
+
+	<footer>
+
+		<p class="autor">Criado por Paulo Henrique Azevedo do Nascimento</p>
+		<a href="https://paulo19961944.github.io/Calculadora-Solar/index.html" class="return"><p class="voltar">Voltar</p></a>		
+	</footer>
+
+</body>
+</html>

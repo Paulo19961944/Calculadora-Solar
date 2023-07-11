@@ -1,0 +1,356 @@
+
+	body{
+		width: 100%;
+	}
+	
+	header{
+		height: 200px;
+		background-color: #000;
+		
+	}
+	
+	
+	h1{
+		text-align: center;  
+		color: white; 
+		font-weight: bold;
+	}
+	
+	
+	section {
+	
+		background-color: #404040;
+		min-height: 1955px;
+		background-image: url('../img/Energia-Solar.jpg');
+		background-size: 100% 100%;
+	}
+	
+	
+	footer {
+	
+		height: 478px;
+		background-color: #000;
+		text-align: center;  
+		color: red; 
+		font-weight: bold;
+	}
+	
+	form{
+		text-align: center;
+	}
+	
+	
+	#EA {
+	
+	height: 60px;
+	text-align: center;
+	font-size: 40px;
+	background-color: black;
+	font-weight: bold;
+	color: white;
+	}
+
+
+	#HSP{
+
+	height: 60px;
+	text-align: center;
+	font-size: 40px;
+	background-color: black;
+	font-weight: bold;
+	color: white;
+	}
+
+
+	#TM{
+
+	height: 60px;
+	text-align: center;
+	font-size: 40px;
+	background-color: black;
+	font-weight: bold;
+	color: white;
+	}
+
+
+	#P{
+
+	height: 60px;
+	text-align: center;
+	font-size: 40px;
+	background-color: black;
+	font-weight: bold;
+	color: white;
+	}
+
+
+	#V{
+
+	height: 60px;
+	text-align: center;
+	font-size: 40px;
+	background-color: black;
+	font-weight: bold;
+	color: white;
+	}
+
+
+	#VM{
+
+	height: 60px;
+	text-align: center;
+	font-size: 40px;
+	background-color: black;
+	font-weight: bold;
+	color: white;
+	}
+
+
+	#IM{
+
+	height: 60px;
+	text-align: center;
+	font-size: 40px;
+	background-color: black;
+	font-weight: bold;
+	color: white;
+	
+	}
+
+
+	#IMP{
+
+	height: 60px;
+	text-align: center;
+	font-size: 40px;
+	background-color: black;
+	font-weight: bold;
+	color: white;
+	}
+
+	
+	#checkbox{
+	width: 25px;
+	height: 25px;
+	}
+	
+	.titulo{
+		padding-top: 65px;
+		font-size: 60px;
+	}
+	
+
+	#off-grid{
+		padding-top: 150px; 
+		padding-bottom: 120px; 
+		font-size: 60px;
+	}
+
+
+	p{
+		color: white; 
+		font-size: 40px; 
+		font-weight: bold;
+	}
+
+	.MPPT{
+		color: white; 
+		padding-top: 150px; 
+		font-size: 40px; 
+		font-weight: bold;
+	}
+
+	.convencional{
+		color: white; 
+		padding-top: 50px; 
+		font-size: 40px; 
+		font-weight: bold;
+	}
+
+	.autor{
+		padding-top: 150px; 
+		font-size: 50px;
+		color: red;
+	}
+
+	.voltar{
+		padding-top: 60px; 
+		font-size: 40px; 
+		text-align: left;
+		color: red;
+		
+	}
+
+	.return{
+		color: red; 
+		text-decoration: underline;
+	}
+
+	.return:hover{
+		color: red; 
+		text-decoration: underline;
+	}
+	
+
+	#on-grid{
+
+		padding-top: 150px; 
+		padding-bottom: 120px; 
+		font-size: 60px;
+	}
+
+
+	#resultado{
+
+		padding-top: 150px; 
+		padding-bottom: 120px; 
+		font-size: 60px;
+	}
+
+	#resultado-off-grid{
+		padding-top: 150px; 
+		padding-bottom: 120px; 
+		font-size: 60px;
+
+	}
+
+
+	#VMP{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+
+	#VOC{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+
+
+	#ISC{
+
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+	
+	#p{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+	#ed{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+	#hsp{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+	#v{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+	#bateria{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+	#NBateria{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+	#vm{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+	#temp{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+	#imp{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;
+	}
+
+	#isc{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;	
+	}
+
+	#pmax{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;	
+	}
+
+	#Ah{
+		height: 60px;
+		text-align: center;
+		font-size: 40px;
+		background-color: black;
+		font-weight: bold;
+		color: white;	
+	}
