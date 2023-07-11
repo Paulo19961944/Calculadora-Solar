@@ -18,23 +18,39 @@ function Calcular() {
 
   // Faz o Cálculo
   let PotInversorMin = EnergiaMediaMensal / 0.7;
+  let ResultadoPotInversorMin = Math.ceil(PotInversorMin)
   let PotInversorMax = EnergiaMediaMensal / 0.5;
+  let ResultadoPotInversorMax = Math.floor(PotInversorMax)
   let EficienciaInversor = EnergiaDiaria / 0.9;
   let EnergiaReal = EficienciaInversor / 0.89;
   let CapacidadeBanco = (EnergiaReal * 3) / TensaoSistema;
   let CapacidadeReal = CapacidadeBanco / 0.6;
   let BateriasSerie = TensaoSistema / TensaoBateria;
+  let ResultadoBateriasSerie = Math.ceil(BateriasSerie)
   let BateriaParalelo = CapacidadeReal / CapacidadeSistema;
-  let TotalBaterias = BateriasSerie * BateriaParalelo;
+  let ResultadoBateriasParalelo = Math.floor(BateriaParalelo);
+  
+  // Verifica se o resultado é menor que 1 e atribui 1 caso seja
+  if (ResultadoBateriasParalelo < 1) {
+    ResultadoBateriasParalelo = 1;
+  }
+  
+  let TotalBaterias = ResultadoBateriasSerie * ResultadoBateriasParalelo;
   let CorrentePainel = EnergiaReal / TensaoSistema;
+  let ResultadoPainel = Math.ceil(CorrentePainel)
   let CoeficientePMax = Temperatura * (PMAX);
   let RC = (100 - CoeficientePMax) / 100;
   let QuantidadeModulosSerie = TensaoSistema / TensaoModulo;
+  let ResultadoModulosSerie = Math.ceil(QuantidadeModulosSerie);
   let QuantidadeModulosParalelo = CorrentePainel / (RC * IMP * HSP);
+  let ResultadoModulosParalelo = Math.floor(QuantidadeModulosParalelo);
   let QuantidadeModulosTotal = QuantidadeModulosParalelo * QuantidadeModulosSerie;
+  let ResultadoModulosTotal = Math.floor(QuantidadeModulosTotal);
   let ISCTotal = ISC * QuantidadeModulosParalelo;
   let CorrenteControlador = ISCTotal * 1.25;
+  let ResultadoControlador = Math.ceil(CorrenteControlador)
   let CapacidadeDisjuntor = CorrenteControlador * 1.2;
+  let ResultadoDisjuntor = Math.floor(CapacidadeDisjuntor);
 
 
   // Captura os Dados
@@ -43,7 +59,6 @@ function Calcular() {
   const ModulosParalelo = document.getElementById('MP');
   const Disjuntor = document.getElementById('CA');
   const PotenciaInversor = document.getElementById('Pot-Inversor');
-  const CapacidadeBateria = document.getElementById('Ah');
   const NumeroBateriasSerie = document.getElementById('BS');
   const NumeroBateriasParalelo = document.getElementById('BP');
   const NumeroTotalBaterias = document.getElementById('NB');
@@ -52,32 +67,32 @@ function Calcular() {
 
   // Insere o Texto no HTML
   if (!isNaN(QuantidadeModulosTotal)) {
-    ModulosTotal.textContent = "Quantidade de Módulos Total: " + QuantidadeModulosTotal;
+    ModulosTotal.textContent = "Quantidade de Módulos Total: " + ResultadoModulosTotal;
   }
 
   if (!isNaN(QuantidadeModulosSerie)) {
-    ModulosSerie.textContent = "Quantidade de Módulos em Série: " + QuantidadeModulosSerie;
+    ModulosSerie.textContent = "Quantidade de Módulos em Série: " + ResultadoModulosSerie;
   }
 
   if (!isNaN(QuantidadeModulosParalelo)) {
-    ModulosParalelo.textContent = "Quantidade de Módulos em Paralelo: " + QuantidadeModulosParalelo;
+    ModulosParalelo.textContent = "Quantidade de Módulos em Paralelo: " + ResultadoModulosParalelo;
   }
 
   if (!isNaN(CapacidadeDisjuntor)) {
-    Disjuntor.textContent = "Disjuntor (A): " + CapacidadeDisjuntor;
+    Disjuntor.textContent = "Disjuntor (A): " + ResultadoDisjuntor;
   }
 
   if (!isNaN(PotInversorMin) && !isNaN(PotInversorMax)) {
-    PotenciaInversor.textContent = "A Potência do Inversor deve ser entre: " + PotInversorMin + " e " + PotInversorMax;
+    PotenciaInversor.textContent = "A Potência do Inversor deve ser entre: " + ResultadoPotInversorMin + " e " + ResultadoPotInversorMax;
   }
 
 
   if (!isNaN(BateriasSerie)) {
-    NumeroBateriasSerie.textContent = "A Quantidade de Baterias em Série é de: " + BateriasSerie;
+    NumeroBateriasSerie.textContent = "A Quantidade de Baterias em Série é de: " + ResultadoBateriasSerie;
   }
 
   if (!isNaN(BateriaParalelo)) {
-    NumeroBateriasParalelo.textContent = "A Quantidade de Baterias em Paralelo é de: " + BateriaParalelo;
+    NumeroBateriasParalelo.textContent = "A Quantidade de Baterias em Paralelo é de: " + ResultadoBateriasParalelo;
   }
 
   if (!isNaN(TotalBaterias)) {
@@ -85,10 +100,10 @@ function Calcular() {
   }
 
   if (!isNaN(CorrentePainel)) {
-    CorrenteTotalPainel.textContent = "A Corrente Total do Painel é de: " + CorrentePainel;
+    CorrenteTotalPainel.textContent = "A Corrente Total do Painel é de: " + ResultadoPainel;
   }
 
   if (!isNaN(CorrenteControlador)) {
-    CorrenteTotalControlador.textContent = "A Corrente do Controlador é: " + CorrenteControlador;
+    CorrenteTotalControlador.textContent = "A Corrente do Controlador é: " + ResultadoControlador;
   }
 }
